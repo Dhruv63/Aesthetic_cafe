@@ -52,7 +52,7 @@ const Space: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="absolute top-0 right-0 w-3/4 h-[400px] rounded-tl-[100px] rounded-br-[40px] overflow-hidden shadow-2xl z-10"
             >
-              <img src="https://images.unsplash.com/photo-1507914372368-b2b0039eb495?q=80&w=1200&auto=format&fit=crop" alt="Interior Main" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=1200&auto=format&fit=crop" alt="Interior Main" className="w-full h-full object-cover" />
             </motion.div>
 
             <motion.div 
