@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
         className="absolute inset-0 z-0"
       >
         <img 
-          src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop" 
+          src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2000&auto=format&fit=crop" 
           alt="Cocoa Cafe Interior" 
           className="w-full h-full object-cover scale-110"
         />

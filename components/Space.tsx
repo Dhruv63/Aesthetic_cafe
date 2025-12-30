@@ -52,7 +52,7 @@ const Space: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="absolute top-0 right-0 w-3/4 h-[400px] rounded-tl-[100px] rounded-br-[40px] overflow-hidden shadow-2xl z-10"
             >
-              <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=1200&auto=format&fit=crop" alt="Interior Main" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1507914372368-b2b0039eb495?q=80&w=1200&auto=format&fit=crop" alt="Interior Main" className="w-full h-full object-cover" />
             </motion.div>
 
             <motion.div 
@@ -61,7 +61,7 @@ const Space: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="absolute bottom-0 left-10 w-1/2 h-[300px] rounded-tr-[80px] rounded-bl-[40px] overflow-hidden shadow-xl z-20 border-8 border-white"
             >
-              <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=800&auto=format&fit=crop" alt="Coffee Detail" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=800&auto=format&fit=crop" alt="Coffee Detail" className="w-full h-full object-cover" />
             </motion.div>
             
             {/* Decorative Circle */}
