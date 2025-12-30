@@ -1,9 +1,20 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const About: React.FC = () => {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+
+  // Moves the image slightly opposite to the scroll direction to create depth (parallax)
+  // As we scroll down (0 -> 1), y goes from -50 to 50, effectively moving the image down 
+  // relative to its container, which counteracts the upward scroll movement.
+  const y = useTransform(scrollYProgress, [0, 1], [-50, 50]);
+
   return (
-    <section id="about" className="py-24 px-6 bg-cream relative">
+    <section ref={ref} id="about" className="py-24 px-6 bg-cream relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
@@ -36,6 +47,7 @@ const About: React.FC = () => {
 
           {/* Image Content */}
           <motion.div
+            style={{ y }}
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -44,8 +56,8 @@ const About: React.FC = () => {
           >
             <div className="relative z-10 rounded-t-[200px] rounded-b-[20px] overflow-hidden shadow-2xl h-[500px] md:h-[600px]">
               <img 
-                src="https://images.unsplash.com/photo-1556740758-90de2929450a?q=80&w=1000&auto=format&fit=crop" 
-                alt="Cocoa Cafe Team" 
+                src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1000&auto=format&fit=crop" 
+                alt="Cocoa Cafe Team and Interior" 
                 className="w-full h-full object-cover"
               />
             </div>

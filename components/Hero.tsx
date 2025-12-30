@@ -6,6 +6,14 @@ const Hero: React.FC = () => {
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
   const y2 = useTransform(scrollY, [0, 500], [0, -100]);
 
+  const handleScrollToMenu = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const menuSection = document.getElementById('menu');
+    if (menuSection) {
+      menuSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative w-full h-[110vh] flex items-center justify-center overflow-hidden">
       {/* Background Parallax */}
@@ -60,7 +68,11 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-col sm:flex-row gap-6"
         >
-          <a href="#menu" className="group relative px-10 py-5 bg-cream text-dark-brown rounded-full font-bold overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-300">
+          <a 
+            href="#menu" 
+            onClick={handleScrollToMenu}
+            className="group relative px-10 py-5 bg-cream text-dark-brown rounded-full font-bold overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-300"
+          >
             <span className="relative z-10 group-hover:text-white transition-colors duration-300 text-lg">View Our Menu</span>
             <div className="absolute inset-0 bg-terracotta transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></div>
           </a>

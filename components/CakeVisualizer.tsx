@@ -152,9 +152,9 @@ const CakeVisualizer: React.FC = () => {
               {error && <p className="mt-4 text-red-500 text-sm text-center">{error}</p>}
             </div>
 
-            <div className="bg-cream rounded-2xl flex items-center justify-center min-h-[300px] border border-beige overflow-hidden">
+            <div className="bg-cream rounded-2xl flex items-center justify-center min-h-[300px] border border-beige overflow-hidden relative group">
               {loading ? (
-                <div className="text-center">
+                <div className="text-center z-10">
                    <p className="text-terracotta font-serif text-xl animate-pulse">Mixing ingredients...</p>
                 </div>
               ) : image ? (
@@ -166,9 +166,18 @@ const CakeVisualizer: React.FC = () => {
                   className="w-full h-full object-cover"
                 />
               ) : (
-                <div className="text-center p-6 opacity-40">
-                  <div className="text-6xl mb-4">🎂</div>
-                  <p>Your cake preview will appear here</p>
+                <div className="w-full h-full relative">
+                  <img 
+                    src="https://images.unsplash.com/photo-1626803775151-61d756612f97?q=80&w=1000&auto=format&fit=crop" 
+                    alt="Example Cake Design"
+                    className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-dark-brown/30 flex items-center justify-center">
+                      <div className="text-center text-white p-6 backdrop-blur-md bg-white/10 rounded-xl border border-white/20 shadow-xl">
+                          <p className="font-serif text-2xl mb-2">Visualise Your Dream</p>
+                          <p className="text-sm opacity-90 font-light">Enter a prompt to create your own masterpiece</p>
+                      </div>
+                   </div>
                 </div>
               )}
             </div>

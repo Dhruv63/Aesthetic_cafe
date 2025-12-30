@@ -11,25 +11,25 @@ const signatureItems: MenuDisplayItem[] = [
     name: 'Blue Velvet Cheese Cream', 
     price: '₹450', 
     tag: 'Signature',
-    image: 'https://images.unsplash.com/photo-1619983081563-430f63602796?q=80&w=800&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=800&auto=format&fit=crop'
   },
   { 
     name: 'Orange Sour Cream Cake', 
     price: '₹380', 
     tag: 'Seasonal',
-    image: 'https://images.unsplash.com/photo-1542826438-bd32fcf25b73?q=80&w=800&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop'
   },
   { 
     name: 'Apple Nut Cinnamon', 
     price: '₹320', 
     tag: 'Best Seller',
-    image: 'https://images.unsplash.com/photo-1621303837174-89787a7d4729?q=80&w=800&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?q=80&w=800&auto=format&fit=crop'
   },
   { 
     name: 'Dark Truffle Roast', 
     price: '₹290', 
     tag: "Chef's Pick",
-    image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=800&auto=format&fit=crop'
   },
 ];
 
